@@ -1,6 +1,6 @@
 from Categoria import *
 class Produto:
-    def __init__(nome - None, preco = None, cat = Categoria()):
+    def __init__(self, nome = None, preco = None, cat = Categoria()):
         self.nome = nome
         self.preco = preco
         self.categoria = cat 
