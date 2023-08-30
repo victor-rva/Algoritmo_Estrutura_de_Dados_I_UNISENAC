@@ -1,5 +1,5 @@
 class Categoria:
-    def __init__(nome - None, id = None):
+    def __init__(self, nome = None, id = None):
         self.nome = nome
         self.id = id
 
