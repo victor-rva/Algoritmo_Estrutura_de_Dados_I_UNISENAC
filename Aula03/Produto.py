@@ -1,3 +1,4 @@
+from Categoria import *
 class Produto:
     def __init__(nome - None, preco = None, cat = Categoria()):
         self.nome = nome
