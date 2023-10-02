@@ -5,7 +5,8 @@ class Retangulo:
         
     def calcular(self):
         area_triangulo = self.altura * self.largura
-        return area_triangulo
+        text = "A area do trinângulo é: " + str(area_triangulo) + "m quadrados."
+        return text
     
     def imprimir(self):
         texto = "Altura: " + str(self.altura) + "\n"
