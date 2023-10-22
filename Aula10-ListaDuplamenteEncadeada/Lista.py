@@ -24,9 +24,13 @@ class Lista:
 
     def addNoInicio(self, valor):
         no = No(valor)
-        if self.inicio != None:
+        if self.inicio == None:
+            self.inicio = no
+            self.fim = no
+        else:
             no.proximo = self.inicio
-        self.inicio = no
+            self.inicio.anterior = no
+            self.inicio = no
         self.tamanho += 1
         self.imprimir()
 
@@ -76,8 +80,13 @@ class Lista:
     def removerDoInicio(self):
         if self.inicio == None:
             print("Lista Vazia")
+        elif self.inicio.proximo == None:
+            self.inicio = None
+            self.inicio.fim = None
+            self.tamanho = 0
         else:
             self.inicio = self.inicio.proximo
+            self.fim = None
             self.tamanho -= 1
         self.imprimir()
 
@@ -86,14 +95,11 @@ class Lista:
             print("Lista Vazia")
         elif self.inicio.proximo == None:
             self.inicio = None
+            self.inicio.fim = None
             self.tamanho = 0
         else:
-            anterior = self.inicio
-            aux = self.inicio.proximo
-            while aux.proximo:
-                anterior = aux 
-                aux = aux.proximo
-            anterior.proximo = None
+            self.inicio = self.inicio.anterior
+            self.fim = None
             self.tamanho -= 1
         self.imprimir()
-        self.imprimirReverso()
+        
