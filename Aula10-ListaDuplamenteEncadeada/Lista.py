@@ -82,11 +82,11 @@ class Lista:
             print("Lista Vazia")
         elif self.inicio.proximo == None:
             self.inicio = None
-            self.inicio.fim = None
+            self.fim = None
             self.tamanho = 0
         else:
             self.inicio = self.inicio.proximo
-            self.fim = None
+            self.inicio.anterior = None
             self.tamanho -= 1
         self.imprimir()
 
@@ -95,11 +95,11 @@ class Lista:
             print("Lista Vazia")
         elif self.inicio.proximo == None:
             self.inicio = None
-            self.inicio.fim = None
+            self.fim = None
             self.tamanho = 0
         else:
-            self.inicio = self.inicio.anterior
-            self.fim = None
+            self.fim = self.fim.anterior
+            self.fim.proximo = None
             self.tamanho -= 1
         self.imprimir()
         
