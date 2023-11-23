@@ -12,6 +12,7 @@ notas = {
     "nota02": "",
     "notaFinal" : ""
 }
+
 nome = input("Digite o nome do aluno: ")
 nota01 = int(input("Digite a nota da avaliação 01 do aluno: "))
 nota02 = int(input("Digite a nota da avaliação 02 do aluno: "))
