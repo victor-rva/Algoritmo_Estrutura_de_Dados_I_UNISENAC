@@ -18,6 +18,7 @@ nota01 = int(input("Digite a nota da avaliação 01 do aluno: "))
 nota02 = int(input("Digite a nota da avaliação 02 do aluno: "))
 nota_final = (nota01 + nota02) /2
 print("Nota final: ", nota_final)
+
 print("------------------------")
 
 notas["nome"] = nome
