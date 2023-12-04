@@ -1,4 +1,4 @@
-from No import No
+from No_ex import No
 
 class Lista:
     def __init__(self):

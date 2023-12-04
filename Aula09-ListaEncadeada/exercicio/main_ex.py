@@ -1,4 +1,4 @@
-from Lista import Lista
+from Lista_ex import Lista
 
 lista = Lista()
 
