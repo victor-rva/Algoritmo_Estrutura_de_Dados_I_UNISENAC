@@ -41,4 +41,32 @@ class Lista:
                 aux = aux.proximo
             print("Tamanho: ", str(self.tamanho))
             
+    def remover(self, valor):
+        tamAtual = self.tamanho
+        if self.inicio == None:
+            print("Lista Vazia")
+            
+        elif self.inicio.proximo == None and self.inicio.dado == valor:
+            self.inicio = None
+            self.tamanho = 0
+        else:
+            if self.inicio.dado == valor:
+                self.inicio = self.inicio.proximo
+                self.tamanho -= 1    
+            else:
+                ant = self.inicio
+                aux = self.inicio.proximo
+                while aux:
+                    if aux.dado == valor:
+                        ant.proximo = aux.proximo
+                        self.tamanho -= 1
+                        break
+                    else:
+                        ant = aux
+                        aux = aux.proximo
+        if tamAtual == self.tamanho:
+            print("Valor não encontrado")
+        self.imprimir()
+                    
+            
             
